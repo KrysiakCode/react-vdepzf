@@ -32,7 +32,7 @@ const FormularzKontaktowy = () => {
           type="text"
           name="Imie"
           value={formularzKontaktowy.kontaktImie}
-          onChange={formularzKontaktowy.onChangeNazwisko}
+          onChange={formularzKontaktowy.onChangeImie}
         />
         <label for="nazwisko">Podaj nazwisko:</label>
         <input
@@ -40,7 +40,7 @@ const FormularzKontaktowy = () => {
           type="text"
           name="Nazwisko"
           value={formularzKontaktowy.kontaktNazwisko}
-          onChange={formularzKontaktowy.onChangeImie}
+          onChange={formularzKontaktowy.onChangeNazwisko}
         />
         <label for="email">Podaj email:</label>
         <input
