@@ -1,13 +1,18 @@
 import React, { useState } from "react";
+
+import Hooks from "../hooks";
 import "./FormularzKontaktowy.css";
 
 const FormularzKontaktowy = () => {
-  const [kontaktImie, setKontaktImie] = useState();
-  const [kontaktNazwisko, setKontaktNazwisko] = useState();
-  const [kontaktEmail, setKontaktEmail] = useState("pk@pk.com");
+  const formularzKontaktowy = Hooks.useFormularzKontaktowy;
 
-  console.log(kontaktImie);
-  console.log(kontaktNazwisko);
+  // const [kontaktImie, setKontaktImie] = useState();
+  // const [kontaktNazwisko, setKontaktNazwisko] = useState();
+  // const [kontaktEmail, setKontaktEmail] = useState("pk@pk.com");
+
+  // console.log(kontaktImie);
+  // console.log(kontaktNazwisko);
+  // console.log(kontaktEmail);
 
   return (
     <form
@@ -15,6 +20,7 @@ const FormularzKontaktowy = () => {
       method="get"
       id="formularzKontaktowy"
       className="formularzKontaktowy"
+      onSubmit={formularzKontaktowy.onClickSubmit}
     >
       <h1>Formularz kontaktowy</h1>
 
@@ -25,16 +31,16 @@ const FormularzKontaktowy = () => {
           id="imie"
           type="text"
           name="Imie"
-          value={kontaktImie}
-          onChange={e => setKontaktImie(e.target.value)}
+          value={formularzKontaktowy.kontaktImie}
+          onChange={formularzKontaktowy.onChangeNazwisko}
         />
         <label for="nazwisko">Podaj nazwisko:</label>
         <input
           id="nazwisko"
           type="text"
           name="Nazwisko"
-          value={kontaktNazwisko}
-          onChange={e => setKontaktNazwisko(e.target.value)}
+          value={formularzKontaktowy.kontaktNazwisko}
+          onChange={formularzKontaktowy.onChangeImie}
         />
         <label for="email">Podaj email:</label>
         <input
@@ -42,8 +48,8 @@ const FormularzKontaktowy = () => {
           type="text"
           name="email"
           required
-          value={kontaktEmail}
-          onChange={e => setKontaktEmail(e.target.value)}
+          value={formularzKontaktowy.kontaktEmail}
+          onChange={formularzKontaktowy.onChangeEmail}
         />
       </fieldset>
 
