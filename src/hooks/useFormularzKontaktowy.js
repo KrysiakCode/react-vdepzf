@@ -1,7 +1,7 @@
 import { useReducer } from "react";
 
 const initialState = {
-  kontaktImie: "",
+  kontaktImie: "John",
   kontaktNazwisko: "",
   kontaktEmail: ""
 };

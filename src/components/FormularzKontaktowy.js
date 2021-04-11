@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-
 import Hooks from "../hooks";
+
 import "./FormularzKontaktowy.css";
 
 const FormularzKontaktowy = () => {
-  const formularzKontaktowy = Hooks.useFormularzKontaktowy;
+  const formularzKontaktowy = Hooks.useFormularzKontaktowy();
 
   // const [kontaktImie, setKontaktImie] = useState();
   // const [kontaktNazwisko, setKontaktNazwisko] = useState();
