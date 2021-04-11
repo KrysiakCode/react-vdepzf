@@ -1,0 +1,21 @@
+h1,
+p {
+  font-family: Lato;
+}
+
+main {
+  color: green;
+}
+
+main::before {
+  content: "przed " attr(xxx);
+  color: red;
+}
+
+main::after {
+  content: " po " attr(title);
+}
+
+.kontent-glowny{
+  background-color: black;
+}
