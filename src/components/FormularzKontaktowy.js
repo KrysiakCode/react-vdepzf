@@ -7,6 +7,7 @@ const FormularzKontaktowy = () => {
   const [kontaktEmail, setKontaktEmail] = useState("pk@pk.com");
 
   console.log(kontaktImie);
+  console.log(kontaktNazwisko);
 
   return (
     <form
